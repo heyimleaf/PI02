@@ -32,6 +32,8 @@ header {
 	z-index:999;
 }
 
+
+
  /* Menu principal */   
 #menu {
   height: 70px;
@@ -99,128 +101,154 @@ header {
 }
 
 
+#footer {
+  position: fixed;
+  background-color:#00BBD4;
+  width: 1920px;
+  height: 39px;
+  top: 935px;
+  left: 0px;
+}
 
-/********************* HOME ******************/
 
+/****************** HOME *************************/
 
-#section {
-  height: 550px;
-  width: 90%;
+#section{
+
+ height: 550px;
+  width: 1500px;
   margin: 50px 2%; 
-    padding: 0; 
-  position: relative;
-  float: left;
-  top:70px;
-  left:20px;  
-  background-color: #fff;
-  border-radius:30px;
-}
-
-#section >  h2{
-  font-size:40px;
-  color:#00BBD4;  
-  position:fixed;
-  left:580px;
-  top:160px;  
-  letter-spacing:4px;
-  text-transform:uppercase;   
- 
-
-
-
-}
-
-#section .img{
-  position:absolute;
-  left:110px;
-  top:130px;
-  
- 
-
-}
-
-
-
-
-/*
-
-#section .img2{
-  position:absolute;
-  left:110px;
-  top:150px;
-  
-
-
-
-
-}
-
-
-
-*/
-
-.txt1{
-    font-size:35px;
-    word-wrap: break-word;
-    letter-spacing:2px;
-    position:fixed;
-    top:300px;  
-    left:600px;
-    width:890px;
-
-
-
-}
-
-/*
-.txt2{
-  
-    font-size:35px;
-    word-wrap: break-word;
-    letter-spacing:2px;
-    position:fixed;
-    top:300px;  
-    left:600px;
-    width:890px;
-
-    
-
-}
-
-*/
-
-
-#section > h3{
-  position:fixed;
-  left:550px;
-  top:400px;  
-  letter-spacing:4px;
-  text-transform:uppercase;  
-
-
-
-}
-
-
-
-
-
-/********************** FIM HOME ****************/
-
-/*********************** Area ********************/ 
-#frmarea {
-
-  height: auto;
-  width: 1200px;
-  margin: 50px 2%; 
-  top:20px;  
-  left: 250px;
+  top:180px;  
+  left: 155px;
   padding: 20px; 
   position: relative;
   float: left;
   background-color: #fff;
-  border-radius:30px;
+  border-radius:50px;
+
 }
+
+
+      
+#container{
+position: absolute;
+width: 480px;
+height: auto;
+margin: 150px auto;
+left: 100px;
+top: -200px;
+}
+
+.principal{
+  width: 480px;
+  height: 270px;
+  overflow: hidden;
+
+
+}
+
+.slide{
+  display:flex;
+  width: 380%;
+  height: 100%;
+  transition: all .8s;
+
+}
+
+label img{
+
+  position: relative;
+  top: 450px;
+  width: 120px;
+  cursor: pointer;
+  float: left;
+  opacity: 0.3;
+  transition: all .4s;
+  
+}
+
+
+#foto2:checked ~ .principal .slide {
+
+  margin-left: -100%;
+
+
+}
+
+
+#foto3:checked ~ .principal .slide{
+
+  margin-left: -200%;
+}
+
+#foto4:checked ~ .principal .slide{
+
+  margin-left: -300%;
+}
+
+input[name="grupo"]{
+  display:none;
+
+}
+
+input[name="grupo"]:checked + label img{
+  opacity: .9;
+
+}
+
+
+input[id="foto1"]:checked #txt1{
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************** FIM HOME ***********************/
+
+
+
+
+
+
+
+/*********************** Area ******************* Augusto 20/10*/  
+
+/*posiciona os forms das páginas, exceto a da home*/
+#frmarea {
+
+  height: 700px;
+  width: 1200px;
+  margin: 50px 2%; 
+  top:45px;  
+  left: 285px;
+  padding: 20px; 
+  position: relative;
+  float: left;
+  background-color: #fff;
+  border-radius:10px;
+
+  }
+
+
+/*FIM*/
 
 /*Mensagem de erro*/
 #msg {
@@ -229,6 +257,7 @@ header {
   height: auto;
   width: 200px;
   margin-left: 45%;
+  text-decoration:none;
 }
 
 /*************** Fim ********************/
@@ -238,6 +267,8 @@ header {
   position: relative;
   height: auto;
   width: 96%;
+
+
 }
 
 #form-content > h3 {
@@ -245,6 +276,7 @@ header {
   position:relative;
   left:30px;
   letter-spacing: 4px;
+   text-transform:uppercase;  
 }
 
 
@@ -256,6 +288,7 @@ header {
   padding: 15px;
   font-size: 14px;
   position: relative;
+
 }
 
 
@@ -264,8 +297,9 @@ header {
   background: transparent;
   margin-bottom: 10px;
   height: 45px;
-	font-size: 16px;
-	padding-right: 10px;
+  font-size: 16px;
+  padding-right: 10px;
+
 }
 
 #frma input[type="text"] {
@@ -280,13 +314,15 @@ header {
 #frma input[type='text']:focus {
   border-bottom: solid 2px #2980b9; 
 }
+
+
 /*Feito augusto 13/10*/
 #btnVoltar{
   -moz-box-shadow: inset 0px 0px 0px 0px #385965;
   -webkit-box-shadow: inset 0px 0px 0px 0px #385965;
   box-shadow: inset 0px 1px 0px 0px #385965;
   background-color: #385965;
-  border: 2px solid #385965;
+  border: 1px solid #385965;
   display: inline-block;
   cursor: pointer;
   color: #FFFFFF;
@@ -296,8 +332,9 @@ header {
   outline: none;
   position: absolute;
   border-radius: 4px;
-  margin-left:120px;
+
   color:white;
+  position:relative;
 }
 
 
@@ -306,7 +343,7 @@ header {
 #frma #btnPesquisar,
 #frmarea-crud .btArea,
 #frmaAssunto-crud .btArea {
-	-moz-box-shadow: inset 0px 0px 0px 0px #385965;
+  -moz-box-shadow: inset 0px 0px 0px 0px #385965;
   -webkit-box-shadow: inset 0px 0px 0px 0px #385965;
   box-shadow: inset 0px 1px 0px 0px #385965;
   background-color: #385965;
@@ -317,7 +354,7 @@ header {
   font-size: 14px;
   padding: 9px 18px;
   text-decoration: none;
-	outline: none;
+  outline: none;
   position: absolute;
   border-radius: 4px;
 
@@ -326,13 +363,13 @@ header {
 
 #btnPesquisar{
   
-  top:-25px;
-  left:400px;
+  top:12px;
+  left:390px;
 }
 
 #btnNovo{
-  left:600px;
-
+  left:510px;
+  top:12px;
 }
 
 
@@ -344,7 +381,7 @@ header {
 
 #frma #btnNovo {
   right: 3.5%;
-  bottom: 19px;
+  bottom: 18px;
 }
 
 /* Grade de itens da area */
@@ -354,14 +391,14 @@ header {
   position: relative;
   width: 96%;
   height: auto;
-  margin-top: -5px;
+  margin-top: -10px;
+
 
 }
 
 table {
   font-family: "Roboto", sans-serif;     
-  background: #f5f5f5;
-  border-collapse: collapse;
+   border-collapse: collapse;
   box-shadow: inset 0 0px 0 #fff;
   font-size: 15px;
   line-height: 20px;
@@ -378,7 +415,7 @@ td {
   /*border-bottom: 1px solid #e8e8e8;*/
   padding: 10px 15px;
   position: relative;
-  /*transition: all 300ms;*/
+     /*transition: all 300ms;*/
 }
 
 tr:hover{
@@ -392,7 +429,9 @@ thead {
   color: #fff;
   background-color:#385965;
   pointer-events:none;
+  
 }
+
 
 
 
@@ -401,6 +440,7 @@ td:first-child {
 } 
 
 td:last-child {
+  /
   border-right: 1px solid #e8e8e8;
   /*box-shadow: inset -1px 0 0 #fff;*//**//**/
 } 
@@ -408,7 +448,7 @@ td:last-child {
 
 
 
-.cmcodigo { width: 100px;  }
+.cmcodigo { width: 5px;  }
 .cmdescricao { width: 66%; }
 .cmdescricao1 { width: 32%; }
 .cmdescricao2 { width: 32%; }
@@ -430,15 +470,29 @@ td:last-child {
 
 
 #frmarea-crud input {
+   
   float: left;
   margin: 0px 50px;
+  top:150px;
+  left:60px;
 }
 
-#frmarea-crud input[type='submit'] { margin-left: 30%;position:relative; margin-top:25px;}
+
+#frmarea-crud h3{
+ 
+  text-transform:uppercase;
+  letter-spacing:8px;
+  top:40px;
+  left:150px;
+}
+
+#frmarea-crud input[type='button'] { margin-left:480px;position:absolute; margin-top:340px;}
+#frmarea-crud input[type='submit'] { margin-left:400px;position:absolute; margin-top:60px;}
 .label-default { 
-  position: absolute;
+ 
   margin: 70px 50px;
   color: #385965;
+
 }
 
 .style-input-default {
@@ -450,16 +504,23 @@ td:last-child {
   border-bottom: 1px solid #ccc;
 }
 
+
 .style-input-default:focus {
-  margin: 5px 1px 3px 0px;
+  margin: 5px 1px 3px f0px;
   border-bottom: 1px solid #385965;
+  
+
 }
 /*Crud de assunto*/
 #frmaAssunto-crud input, #frmaAssunto-crud label , #frmarea-crud input, #frmarea-crud label  {
   position: relative;
-}
+} 
+#frmaAssunto-crud{width:50%;margin-left:12.5%;position:relative;float:left;background-color:white;height:500px;margin-top:100px;}
+#frmaAssunto-crud label{display:block;padding:15px;margin:0;}
 #frmaAssunto-crud select {margin-left:13px;padding: 8px 18px;}
-#crudAssunto h3, #crudArea h3{color:#385965;position:relative;font-family: "Roboto", sans-serif;  margin: 0 50px 20px 50px;}
+#frma select {margin-left:13px;padding: 8px 18px;position:relative;}
+/* augusto 19/10*/
+#crudAssunto h3, #crudArea h3,#crudProf h3{color:#385965;position:relative;font-family: "Roboto", sans-serif;  margin: 0 50px 20px 50px;}
 #frmaAssunto-crud input[type='submit'] {  position: relative;margin-left:49%;margin-top:25px;}
 /* Fim - Japa */
 /* Pagina de professores */
@@ -470,54 +531,55 @@ td:last-child {
 	width:33%;
 }
 .cmID{
-	width:11%;
+	width:6%;
+}
+.cmTipo{
+	width:5%;
 }
 
 
-#footer {
-  position: fixed;
-  background-color:#00BBD4;
-  width: 1920px;
-  height: 232px;
-  top: 935px;
-  left: 0px;
-}
-/*--------------------------------------- Ligh-------------tbox---------------------- */
-.background {
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	background-color:#000;
-	opacity:.0;
-	filter:alpha(opacity=0);
-	z-index:100;
-	display:none;
-}
-	
-.box{
-	position:absolute;
-	top:20%;
-	left:30%;
-	z-index:101;
-	border-radius:4px;
-	display:none;
-	margin: 100px auto;
-	  width: 550px;
-	  height: 250px;
-	  border-radius: 5px;
-	  background: #ccc;
-}
-.close{
-	padding:2px;
-	cursor:pointer;
-}
 
 
-/* ------------------------------------------------------- */
 .logoIndex{
 	float:left;
 	margin-left:30%;
 	margin-top:150px;
+
+}
+/* AUGUSTO 19/10*/
+#frmProf-crud input{
+	position:relative;
+	display:inline-block;
+	margin-left:25%;
+
+
+
+}
+#frmProf-crud label{
+	position:relative;
+	margin-left:25%;
+}
+#frmProf-crud input[type="radio"]{
+	display:inline;
+	margin:0;
+	padding:0;
+	width:50px;
+}
+#frmProf-crud .btArea{
+	position:relative;
+
+	margin-left:45%;
+	margin-top:50px;
+}
+
+
+
+
+.foottxt ul li a{
+ position: absolute;
+    top:530px;
+    left:580px;
+    color:#00BBD4;
+  text-decoration:none;
+
 }
